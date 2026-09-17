@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To-Do List</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+    </div>
+
+    <main class="todo-container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>✓ TaskFlow</h1>
+            <p>Organize your day, one task at a time</p>
+        </header>
+
+
+        <!-- Add Task -->
+        <form id="taskForm" class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="addButton">
+                + Add Task
+            </button>
+
+        </form>
+
+
+        <!-- Task Statistics -->
+        <section class="stats">
+
+            <div class="stat-box">
+                <strong id="totalTasks">0</strong>
+                <span>Total</span>
+            </div>
+
+            <div class="stat-box">
+                <strong id="activeTasks">0</strong>
+                <span>Active</span>
+            </div>
+
+            <div class="stat-box">
+                <strong id="completedTasks">0</strong>
+                <span>Completed</span>
+            </div>
+
+        </section>
+
+
+        <!-- Filter Buttons -->
+        <nav class="filters" aria-label="Task filters">
+
+            <button
+                class="filter active"
+                data-filter="all">
+                All
+            </button>
+
+            <button
+                class="filter"
+                data-filter="active">
+                Active
+            </button>
+
+            <button
+                class="filter"
+                data-filter="completed">
+                Completed
+            </button>
+
+        </nav>
+
+
+        <!-- Task List -->
+        <section class="task-area">
+
+            <ul id="taskList"></ul>
+
+            <div id="emptyMessage" class="empty-message">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks here</h3>
+                <p>Add a task to get started!</p>
+            </div>
+
+        </section>
+
+
+        <!-- Bottom Section -->
+        <footer class="footer">
+
+            <span id="taskCount">
+                0 tasks remaining
+            </span>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+        </footer>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
